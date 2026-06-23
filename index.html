@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐾 LUTA FOFINHA · Kombat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- TELA INICIAL -->
+    <div id="menu-screen" class="screen active">
+      <div class="menu-title">
+        <h1>🐾 KOMBAT<br><span class="subtitle">Fofinho & Mortal</span></h1>
+      </div>
+      <div class="menu-characters">
+        <div class="char-preview" data-char="bonnie">
+          <div class="avatar">🐰</div>
+          <span>Bonnie</span>
+        </div>
+        <div class="char-preview" data-char="rosse">
+          <div class="avatar">🪳</div>
+          <span>Rosse</span>
+        </div>
+        <div class="char-preview" data-char="miau">
+          <div class="avatar">🐱</div>
+          <span>MIAU</span>
+        </div>
+      </div>
+      <button id="btn-play" class="btn-kombat">⚔️ LUTAR</button>
+      <p class="vs-machine">🖥️ VS MÁQUINA</p>
+    </div>
+
+    <!-- TELA DE SELEÇÃO (personagem jogador) -->
+    <div id="select-screen" class="screen">
+      <h2>👊 ESCOLHA SEU LUTADOR</h2>
+      <div class="select-grid">
+        <div class="select-card" data-char="bonnie">
+          <div class="avatar big">🐰</div>
+          <span>Bonnie</span>
+          <small>soco & raiva</small>
+        </div>
+        <div class="select-card" data-char="rosse">
+          <div class="avatar big">🪳</div>
+          <span>Rosse</span>
+          <small>fogo à distância</small>
+        </div>
+        <div class="select-card" data-char="miau">
+          <div class="avatar big">🐱</div>
+          <span>MIAU</span>
+          <small>garras fofas</small>
+        </div>
+      </div>
+      <button id="btn-back-menu" class="btn-kombat secondary">⬅ VOLTAR</button>
+    </div>
+
+    <!-- TELA DE LUTA -->
+    <div id="fight-screen" class="screen">
+      <div class="fight-hud">
+        <div class="health-bar player">
+          <span class="name" id="player-name">PLAYER</span>
+          <div class="bar-bg"><div class="bar-fill" id="player-health" style="width:100%"></div></div>
+        </div>
+        <div class="fight-title">⚡ VS ⚡</div>
+        <div class="health-bar enemy">
+          <span class="name" id="enemy-name">MÁQUINA</span>
+          <div class="bar-bg"><div class="bar-fill" id="enemy-health" style="width:100%"></div></div>
+        </div>
+      </div>
+
+      <div class="arena">
+        <div class="fighter player-fighter" id="player-fighter">
+          <div class="sprite" id="player-sprite">🐰</div>
+          <div class="attack-effect" id="player-attack"></div>
+        </div>
+        <div class="fighter enemy-fighter" id="enemy-fighter">
+          <div class="sprite" id="enemy-sprite">🐱</div>
+          <div class="attack-effect" id="enemy-attack"></div>
+        </div>
+      </div>
+
+      <div class="fight-controls">
+        <button class="btn-fight" id="btn-attack">👊 SOCAR</button>
+        <button class="btn-fight special" id="btn-special">🔥 PODER</button>
+        <button class="btn-fight" id="btn-block">🛡️ DEFESA</button>
+      </div>
+      <div class="fight-message" id="fight-message">⚔️ LUTE!</div>
+      <button id="btn-restart" class="btn-kombat" style="margin: 6px auto;">🔄 REVANCHE</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
